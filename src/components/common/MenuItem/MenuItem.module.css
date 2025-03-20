@@ -1,0 +1,27 @@
+.submenu {
+    padding-left: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.submenu__dropdown {
+    transition-timing-function: ease;
+}
+
+@media screen and (min-width: 992px) {
+    .submenu {
+        padding-inline: 20px;
+        padding-block: 20px;
+        width: 400px;
+    }
+
+    .submenu__dropdown {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        z-index: 18;
+        box-shadow: 0 0 30px var(--color-black-shadow);
+        border-radius: 0 10px 10px 10px;
+        background-color: var(--color-white);
+    }
+}
