@@ -13,13 +13,16 @@ const Header = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null)
   const [openMenu, setOpenMenu] = useState(false)
   const [submenuToOpen, setSubmenuToOpen] = useState<number | null>(null)
+  const [scrolling, setScrolling] = useState(window.scrollY > 0)
+
+  window.addEventListener("scroll", () => setScrolling(window.scrollY > 0))
 
   const handleOpenMenu = () => setOpenMenu(!openMenu)
 
   const handleOpenSubmenu = (submenuIndex: number | null) => setSubmenuToOpen(submenuIndex)
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header + (scrolling ? ` ${styles.scrolling}` : "")}>
       <Container className={styles.header__container}>
         <nav className={styles.header__navigation}>
           <div className={styles.header__menuIcon} onClick={handleOpenMenu}>
