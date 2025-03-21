@@ -1,0 +1,29 @@
+.product {
+    margin-block: 100px 60px;
+}
+
+.product__container {
+    padding: 0;
+    display: flex;
+    gap: 40px 20px;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 990px) {    
+    .product {
+        margin-top: 60px;
+    }
+
+    .product__container {
+        padding-inline: 20px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .product__container {
+        column-gap: 120px;
+        padding: 0;
+    }
+}
