@@ -10,7 +10,7 @@ export interface CartItemProps {
 const CartItem = ({ item, deleteItem }: CartItemProps) => {
     const { id, quantity, product } = item
     const { name, thumbnails } = product
-    const imagePath = "./src/assets/images/"
+    const imagePath = "/images/"
 
 
     const priceWithDiscount = (price: number, discount: number) => price - (price * (discount / 100))

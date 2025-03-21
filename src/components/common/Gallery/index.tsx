@@ -16,11 +16,8 @@ export interface GalleryProps {
 }
 
 const Gallery = ({ name, images, thumbnails, featured, changeImage, inModal }: GalleryProps) => {
-    const imagePath = `/src/assets/images/`
+    const imagePath = "/images/"
     const [modalIsOpen, setModalIsOpen] = useState(false)
-
-    console.log(location.host);
-    
 
     const openModal = () => !inModal && setModalIsOpen(!modalIsOpen)
 
