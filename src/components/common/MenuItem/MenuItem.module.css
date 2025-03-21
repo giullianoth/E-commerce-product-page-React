@@ -4,10 +4,6 @@
     transition: var(--transition);
 }
 
-.submenu__dropdown {
-    transition-timing-function: ease;
-}
-
 @media screen and (min-width: 992px) {
     .submenu {
         padding-inline: 20px;

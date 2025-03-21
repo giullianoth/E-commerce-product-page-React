@@ -1,8 +1,7 @@
 import { MouseEvent } from "react"
 import { MenuInterface } from "../../../definitions/menu"
 import styles from "./MenuItem.module.css"
-import SlideDown from "react-slidedown"
-import 'react-slidedown/lib/slidedown.css'
+import AnimateHeight from "react-animate-height"
 
 export interface MenuItemProps {
   menuItem: MenuInterface
@@ -32,8 +31,12 @@ const MenuItem = ({ menuItem, index, menuItemClassName, submenuItemClassName, su
     <li className={menuItemClassName}>
       <a href={url} onClick={handleOpenSubmenu}>{menu}</a>
 
-      <SlideDown className={`my-dropdown-slidedown ${styles.submenu__dropdown}`}>
-        {submenu && submenuToOpen! === index &&
+      {submenu &&
+        <AnimateHeight
+          id={`submenu-${index! + 1}`}
+          duration={300}
+          height={submenuToOpen! === index ? "auto" : 0}
+          className={styles.submenu__dropdown}>
           <ul className={styles.submenu}>
             {submenu.map((subitem, submenuIndex) => (
               <MenuItem
@@ -41,8 +44,8 @@ const MenuItem = ({ menuItem, index, menuItemClassName, submenuItemClassName, su
                 menuItem={subitem}
                 menuItemClassName={submenuItemClassName} />
             ))}
-          </ul>}
-      </SlideDown>
+          </ul>
+        </AnimateHeight>}
     </li>
   )
 }
