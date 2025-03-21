@@ -1,6 +1,6 @@
 # E-commerce product page - Web Design Project
 
-[![E-commerce product page - Web Design Project](/src/assets/images/screenshots/gif-e-commerce.gif)](https://e-commerce-product-page-lake.vercel.app/)
+[![E-commerce product page - Web Design Project](/src/assets/images/screenshots/gif-e-commerce.gif)](https://e-commerce-product-page-react.vercel.app/)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React JS](https://img.shields.io/badge/React%20JS-58C4DC?style=flat&logo=react&logoColor=white)](https://react.dev/)
@@ -61,11 +61,11 @@ Captura de tela em 1440px | Screenshot in 1440px
 
 ---
 
-Você também pode conferir a página acessando este link: [https://e-commerce-product-page-lake.vercel.app/](https://e-commerce-product-page-lake.vercel.app/).
+Você também pode conferir a página acessando este link: [https://e-commerce-product-page-react.vercel.app/](https://e-commerce-product-page-react.vercel.app/).
 
 **Observação:** Por se tratar de um projeto para fins acadêmicos, os links contidos na página não funcionarão, exceto os dois últimos localizados no rodapé e os botões para determinada ação.
 
-*You can also check the page by accessing this link: [https://e-commerce-product-page-lake.vercel.app/](https://e-commerce-product-page-lake.vercel.app/).*
+*You can also check the page by accessing this link: [https://e-commerce-product-page-react.vercel.app/](https://e-commerce-product-page-react.vercel.app/).*
 
 *__Note:__ As it is a project for academic purposes, the links contained on the page will not work, except for the last two located in the footer and the buttons for a certain action.*
 
