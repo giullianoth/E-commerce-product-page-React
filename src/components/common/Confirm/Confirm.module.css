@@ -1,0 +1,9 @@
+.confirm {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: var(--color-white);
+    padding: 8px 12px;
+    font-size: 1.4em;
+    box-shadow: 0 0 10px var(--color-orange);
+}

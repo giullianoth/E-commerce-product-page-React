@@ -9,7 +9,112 @@
     flex-direction: column;
 }
 
-@media screen and (min-width: 990px) {    
+.product__info {
+    padding-inline: 20px;
+    margin-inline: auto;
+    max-width: 600px;
+}
+
+.product__title {
+    margin-bottom: 40px;
+}
+
+.product__brand {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-orange);
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product__name {
+    font-size: 2em;
+}
+
+.product__description {
+    line-height: 1.6em;
+    margin-bottom: 40px;
+}
+
+.product__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+    margin-bottom: 40px;
+}
+
+.product__currentPrice {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.product__discountedPrice {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-very-dark-blue);
+}
+
+.product__discount {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--color-very-dark-blue);
+    color: var(--color-white);
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.product__actualPrice {
+    color: var(--color-grayish-blue);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.product__actions {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.product__quantity {
+    display: flex;
+}
+
+.product__quantityArea {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-light-grayish-blue);
+    border: none;
+    color: var(--color-very-dark-blue);
+    font-weight: 700;
+}
+
+.product__quantityArea img {
+    margin: auto;
+}
+
+.product__purchase button {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .product__actions {
+        flex-direction: row;
+    }
+
+    p.product__quantityArea {
+        width: 36px;
+    }
+
+    .product__purchase button {
+        padding-inline: 80px;
+    }
+}
+
+@media screen and (min-width: 990px) {
     .product {
         margin-top: 60px;
     }
@@ -18,6 +123,24 @@
         padding-inline: 20px;
         flex-direction: row;
         align-items: center;
+    }
+
+    .product__info {
+        flex-basis: 50%;
+        padding: 0;
+    }
+
+    .product__name {
+        font-size: 3em;
+    }
+
+    .product__description {
+        font-size: 1.2em;
+    }
+
+    .product__price {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

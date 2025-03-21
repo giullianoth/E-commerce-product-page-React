@@ -78,7 +78,11 @@ const Header = ({ cartItems, deleteCartItem }: HeaderProps) => {
           <div className={styles.header__cart}>
             <button className="simple-link" onClick={handleOpenCart}>
               <img src={iconCart} alt="Cart" />
-              <span className={styles.header__cartQt}>1</span>
+
+              {cartItems.length > 0 &&
+                <span className={styles.header__cartQt}>
+                  {cartItems.length}
+                </span>}
             </button>
 
             <Cart
