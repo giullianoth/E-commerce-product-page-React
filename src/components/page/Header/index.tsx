@@ -8,18 +8,34 @@ import iconCart from "../../../assets/images/icon-cart.svg"
 import avatar from "../../../assets/images/image-avatar.png"
 import MenuItem from "../../common/MenuItem"
 import { menu } from "../../../definitions/definitions"
+import Cart from "../../common/Cart"
+import { cartItemInterface } from "../../../definitions/cartItem"
 
-const Header = () => {
+export interface HeaderProps {
+  cartItems: cartItemInterface[]
+  deleteCartItem: Function
+}
+
+const Header = ({ cartItems, deleteCartItem }: HeaderProps) => {
   const overlayRef = useRef<HTMLDivElement | null>(null)
   const [openMenu, setOpenMenu] = useState(false)
   const [submenuToOpen, setSubmenuToOpen] = useState<number | null>(null)
   const [scrolling, setScrolling] = useState(window.scrollY > 0)
+  const [openCart, setOpenCart] = useState(false)
 
   window.addEventListener("scroll", () => setScrolling(window.scrollY > 0))
 
   const handleOpenMenu = () => setOpenMenu(!openMenu)
 
-  const handleOpenSubmenu = (submenuIndex: number | null) => setSubmenuToOpen(submenuIndex)
+  const handleOpenSubmenu = (submenuIndex: number | null) => {
+    setSubmenuToOpen(submenuIndex)
+    setOpenCart(false)
+  }
+
+  const handleOpenCart = () => {
+    setOpenCart(!openCart)
+    setSubmenuToOpen(null)
+  }
 
   return (
     <header className={styles.header + (scrolling ? ` ${styles.scrolling}` : "")}>
@@ -60,10 +76,15 @@ const Header = () => {
 
         <div className={styles.header__profile}>
           <div className={styles.header__cart}>
-            <button className="simple-link">
+            <button className="simple-link" onClick={handleOpenCart}>
               <img src={iconCart} alt="Cart" />
               <span className={styles.header__cartQt}>1</span>
             </button>
+
+            <Cart
+              cartItems={cartItems}
+              openCart={openCart}
+              deleteItem={deleteCartItem} />
           </div>
 
           <div className={styles.header__account}>

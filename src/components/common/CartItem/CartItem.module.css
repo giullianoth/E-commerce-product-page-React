@@ -1,0 +1,29 @@
+.cartItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding-block: 10px;
+}
+
+.cartItem__thumb {
+    flex-basis: 40px;
+}
+
+.cartItem__thumb img {
+    border-radius: 6px;
+}
+
+.cartItem__info {
+    flex-grow: 1;
+    font-size: 0.8em;
+}
+
+.cartItem__info h3 {
+    font-weight: 400;
+    color: var(--color-dark-grayish-blue);
+}
+
+.cartItem__delete {
+    flex-basis: 20px;
+}
