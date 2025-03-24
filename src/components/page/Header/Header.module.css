@@ -20,6 +20,12 @@
     gap: 20px;
 }
 
+.header__navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
 .header__menuIcon {
     cursor: pointer;
     position: relative;
@@ -100,6 +106,7 @@
 
 .header__logo img {
     width: 140px;
+    margin-bottom: 4px;
 }
 
 .header__profile {
@@ -142,7 +149,11 @@
     }
 
     .header__navigation {
-        order: 2;
+        column-gap: 40px;
+    }
+
+    .header__navigation nav {
+        order: 1;
     }
 
     .header__menuIcon {
@@ -189,12 +200,11 @@
         padding-block: 12px;
     }
 
-    .header__logo {
-        order: 1;
+    .header__logo img {
+        margin-bottom: 8px;
     }
 
     .header__profile {
-        order: 3;
         margin: 0;
     }
 
@@ -216,7 +226,11 @@
 
 @media screen and (min-width: 1200px) {
     .header__profile {
-        column-gap: 90px;
+        column-gap: 70px;
+    }
+
+    .header__navigation {
+        column-gap: 70px;
     }
 }
 
